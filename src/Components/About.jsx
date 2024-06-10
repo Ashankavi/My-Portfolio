@@ -9,7 +9,7 @@ const About = () => {
     {
       title: "About Me",
       description: "My academic journey has been both rigorous and rewarding. I recently completed my Higher National Diploma in Computing (General) from IDM Nations Campus, complemented by a Diploma in Information Technology from ESOFT Metro Campus. These programs have solidified my knowledge in key web development technologies, including HTML, CSS, Tailwind CSS, React, and JavaScript.",
-      details: "With extensive experience in Figma and Adobe Photoshop, I combine my technical skills with a keen eye for design, enabling me to create visually appealing and user-friendly interfaces."
+      details: "With extensive experience in Figma and Adobe Photoshop, I create visually appealing and user-friendly interfaces."
     },
     {
       title: "My Details",
@@ -51,7 +51,7 @@ const About = () => {
           </div>
           <div className='py-4 md:py-8'>
             {currentSlide === 0 && (
-              <a href={CV} download className="p-2 mt-4 mr-4 text-black hover:bg-[#f7bb7e] bg-white rounded">Download CV</a>
+              <a href={CV} download className="py-4 px-8 mt-4 mr-4 text-xl text-white border-[1px]  border-white hover:bg-[#ffffff] hover:text-[#000000]  rounded">Download CV</a>
             )}
           </div>
           <div className="flex items-end justify-between mt-2">

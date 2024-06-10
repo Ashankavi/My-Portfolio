@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaTwitter, FaFacebook, FaLinkedin, FaInstagram, FaGithub, FaBehance, FaDribbble } from 'react-icons/fa';
-import IMG1 from '../Assets/Hero/Me45.jpg';
 import './Hero.css'; // Import the CSS file
 
+import IMG1 from '../Assets/Hero/Me45.jpg';
+import CV from '../Assets/About/MyCV.pdf'; // Assuming the CV file is in this path
+
+
+
 const Hero = () => {
+
+  const [currentSlide, setCurrentSlide] = useState(0);
+
   return (
     <div className='relative hero-container'>
       <div className="w-full h-full bg-center bg-cover hero-bg" style={{ backgroundImage: `url(${IMG1})` }}>
@@ -13,6 +20,11 @@ const Hero = () => {
               <h1 className='py-2 text-3xl md:text-5xl sm:text-4xl hover:text-[#f7bb7e]'>Hello, I'm</h1>
               <h1 id="name" className='leading-none uppercase md:text-9xl sm:text-8xl text-7xl text-shadow hover:text-[#f7bb7e]'>Ashan <br />Kavindu</h1>
               <h1 className='text-[30px] md:text-5xl sm:text-4xl pb-5 hover:text-[#f7bb7e]'>Front-End-Developer</h1>
+              <div className='py-4 md:py-8'>
+            {currentSlide === 0 && (
+              <a href={CV} download className="py-4 px-8 mt-4 mr-4 text-xl text-white border-[1px]  border-white hover:bg-[#ffffff] hover:text-[#000000]  rounded">Download CV</a>
+            )}
+          </div>
             </div>
           </div>
         </div>
