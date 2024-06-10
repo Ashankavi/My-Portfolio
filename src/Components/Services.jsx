@@ -26,7 +26,7 @@ const Services = () => {
 
   return (
     <div className="relative items-center justify-center w-full h-full text-center bg-cover" style={{backgroundImage: `url(${IMG3})`}}>
-      <div className="pt-8 text-6xl font-bold text-white transform md:text-8xl font-londrina">
+      <div className="pt-8 text-6xl text-white transform md:text-8xl font-londrina">
         Services
       </div>
       
