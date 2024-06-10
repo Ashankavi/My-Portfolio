@@ -1,0 +1,42 @@
+.hero-container {
+  position: relative;
+}
+
+.hero-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.moving-line {
+  position: absolute;
+  top: 0;
+  width: 2px; /* Adjust the thickness of the lines */
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, white, transparent);
+  animation: moveLine 3s linear infinite;
+}
+
+/* Specific positions for each line */
+.line1 {
+  left: 33%;
+  animation-delay: 0s;
+}
+
+.line2 {
+  left: 50%;
+  animation-delay: 1s;
+}
+
+.line3 {
+  left: 67%;
+  animation-delay: 2s;
+}
+
+@keyframes moveLine {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
