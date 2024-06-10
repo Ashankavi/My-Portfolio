@@ -29,7 +29,7 @@ const Footer = () => {
             <FaDribbble />
           </a>
         </div>
-        <p className="mt-6">© 2024 AshanKavi. All rights reserved.</p>
+        <p className="mt-6 font-londrina">© 2024 AshanKavi. All rights reserved.</p>
       </div>
     </footer>
   );

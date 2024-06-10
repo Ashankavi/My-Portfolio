@@ -2,9 +2,19 @@ import React, { useState, useEffect } from 'react';
 // Importing images
 import Sky from '../Assets/sky3.jpg';
 
-import IMG1 from '../Assets/Hero/Me2.jpg';
-import IMG2 from '../Assets/Hero/Me3.jpg';
-import IMG3 from '../Assets/Hero/Me4.jpg';
+import NehaStore from '../Assets/Project/UiUX/NehaStore1.jpg';
+import Coffee from '../Assets/Project/UiUX/CoffeeApp.jpg';
+import BeastPolio from '../Assets/Project/UiUX/BeastPolio.jpg';
+import Cinema from '../Assets/Project/UiUX/CinamaHouse.jpg';
+import HappyToon from '../Assets/Project/UiUX/HappyToon.jpg';
+import HFS from '../Assets/Project/UiUX/HFS.jpg';
+import FashionApp from '../Assets/Project/UiUX/FashionApp.jpg';
+import Photographer from '../Assets/Project/UiUX/Photographer.jpg';
+
+import MainPortfolio from '../Assets/Project/Web/MainPolio.jpg';
+import LandingPage from '../Assets/Project/Web/LandingPage.jpg';
+import BusinessLanding from '../Assets/Project/Web/BusinessLanding.jpg';
+
 
 const Project = () => {
   const [selectedCategory, setSelectedCategory] = useState('Web Development');
@@ -25,20 +35,23 @@ const Project = () => {
   }, []);
 
   const webDevelopmentImages = [
-    { src: IMG1, name: 'Web Development Project 1', description: 'This is the first web development project', figmaLink: '#', githubLink: '#' },
-    { src: IMG2, name: 'Web Development Project 2', description: 'This is the second web development project', figmaLink: '#', githubLink: '#' },
-    { src: IMG3, name: 'Web Development Project 3', description: 'This is the third web development project', figmaLink: '#', githubLink: '#' },
-    { src: IMG1, name: 'Web Development Project 4', description: 'This is the fourth web development project', figmaLink: '#', githubLink: '#' },
-    { src: IMG2, name: 'Web Development Project 5', description: 'This is the fifth web development project', figmaLink: '#', githubLink: '#' },
-    { src: IMG3, name: 'Web Development Project 6', description: 'This is the sixth web development project', figmaLink: '#', githubLink: '#' },
+    { src: MainPortfolio, name: 'UI/UX Design Project 4', description: 'This is the fourth UI/UX design project', figmaLink: '#', githubLink: '#' },
+    { src: Photographer, name: 'UI/UX Design Project 1', description: 'This is the first UI/UX design project', figmaLink: '#', githubLink: '#' },
+    { src: NehaStore, name: 'UI/UX Design Project 3', description: 'This is the third UI/UX design project', figmaLink: '#', githubLink: '#' },
+    { src: BeastPolio, name: 'Web Development Project 4', description: 'This is the fourth web development project', figmaLink: '#', githubLink: '#' },
+    { src: LandingPage, name: 'Web Development Project 5', description: 'This is the fifth web development project', figmaLink: '#', githubLink: '#' },
+    { src: BusinessLanding, name: 'Web Development Project 6', description: 'This is the sixth web development project', figmaLink: '#', githubLink: '#' },
   ];
 
   const uiUxImages = [
-    { src: IMG3, name: 'UI/UX Design Project 1', description: 'This is the first UI/UX design project', figmaLink: '#', githubLink: '#' },
-    { src: IMG1, name: 'UI/UX Design Project 2', description: 'This is the second UI/UX design project', figmaLink: '#', githubLink: '#' },
-    { src: IMG1, name: 'UI/UX Design Project 3', description: 'This is the third UI/UX design project', figmaLink: '#', githubLink: '#' },
-    { src: IMG3, name: 'UI/UX Design Project 1', description: 'This is the first UI/UX design project', figmaLink: '#', githubLink: '#' },
-    { src: IMG1, name: 'UI/UX Design Project 4', description: 'This is the fourth UI/UX design project', figmaLink: '#', githubLink: '#' },
+    { src: Photographer, name: 'UI/UX Design Project 4', description: 'This is the fourth UI/UX design project', figmaLink: '#', githubLink: '#' },
+    { src: NehaStore, name: 'UI/UX Design Project 1', description: 'This is the first UI/UX design project', figmaLink: '#', githubLink: '#' },
+    { src: Coffee, name: 'UI/UX Design Project 2', description: 'This is the second UI/UX design project', figmaLink: '#', githubLink: '#' },
+    { src: BeastPolio, name: 'UI/UX Design Project 3', description: 'This is the third UI/UX design project', figmaLink: '#', githubLink: '#' },
+    { src: Cinema, name: 'UI/UX Design Project 1', description: 'This is the first UI/UX design project', figmaLink: '#', githubLink: '#' },
+    { src: HappyToon, name: 'UI/UX Design Project 4', description: 'This is the fourth UI/UX design project', figmaLink: '#', githubLink: '#' },
+    { src: HFS, name: 'UI/UX Design Project 4', description: 'This is the fourth UI/UX design project', figmaLink: '#', githubLink: '#' },
+    { src: FashionApp, name: 'UI/UX Design Project 4', description: 'This is the fourth UI/UX design project', figmaLink: '#', githubLink: '#' },
   ];
 
   const images = selectedCategory === 'Web Development' ? webDevelopmentImages : uiUxImages;
@@ -56,17 +69,17 @@ const Project = () => {
       <div className="p-8 text-6xl text-white md:text-8xl font-londrina">
         Projects
       </div>
-      <div className="flex justify-center mt-4 space-x-4">
+      <div className="flex justify-center mt-4 space-x-4 font-londrina">
         <button
           onClick={() => { setSelectedCategory('Web Development'); setStartIndex(0); }}
-          className={`text-xl ${selectedCategory === 'Web Development' ? 'text-[#f7bb7e]' : 'text-white'}`}
+          className={`text-3xl uppercase ${selectedCategory === 'Web Development' ? 'text-[#f7bb7e]' : 'text-white'}`}
         >
           Web Development
         </button>
-        <span className="text-xl text-white">|</span>
+        <span className="text-3xl text-white uppercase">|</span>
         <button
           onClick={() => { setSelectedCategory('UI/UX Design'); setStartIndex(0); }}
-          className={`text-xl ${selectedCategory === 'UI/UX Design' ? 'text-[#f7bb7e]' : 'text-white'}`}
+          className={`text-3xl  ${selectedCategory === 'UI/UX Design' ? 'text-[#f7bb7e]' : 'text-white'}`}
         >
           UI/UX Design
         </button>
