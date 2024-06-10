@@ -29,6 +29,7 @@ const Services = () => {
       <div className="pt-8 text-6xl text-white transform md:text-8xl font-londrina">
         Services
       </div>
+      <h1 className='text-xl text-white'>Web Development <span>|</span> <span>UI/Ux Design</span></h1>
       
       <div className="grid mt-16 md:grid-cols-3"> 
         {images.map((image, index) => (

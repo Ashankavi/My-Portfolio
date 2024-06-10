@@ -1,141 +1,112 @@
-import React, { useState } from 'react';
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
-
-import invoiceImage from '../Assets/Ashxms.jpg'; // Example image
+import React, { useState, useEffect } from 'react';
+// Importing images
+import IMG1 from '../Assets/Hero/Me2.jpg';
+import IMG2 from '../Assets/Hero/Me3.jpg';
+import IMG3 from '../Assets/Hero/Me4.jpg';
 
 const Project = () => {
-    const cards = [
-        {
-            id: 1,
-            title: "Invoice System",
-            description: "Manage your invoices efficiently.Manage your invoices efficiently.Manage your invoices efficiently.Manage your invoices efficiently.",
-            image: invoiceImage,
-            link1: "https://dribbble.com/shanuk05",
-            link2: "/more-info",
-            category: "Web Development"
-        },
+  const [selectedCategory, setSelectedCategory] = useState('Web Development');
+  const [startIndex, setStartIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
-        {
-            id: 2,
-            title: "Web Development",
-            description: "Build robust web applications.",
-            image: invoiceImage,
-            link1: "/web-development",
-            link2: "/more-info",
-            category: "Web Development"
-        },
-        {
-            id: 3,
-            title: "Custom Software",
-            description: "Tailor-made software solutions.",
-            image: invoiceImage,
-            link1: "/custom-software",
-            link2: "/more-info",
-            category: "Web Development"
-        },
-
-        {
-          id: 4,
-          title: "Mobile App",
-          description: "Develop cutting-edge mobile applications.",
-          image: invoiceImage,
-          link1: "/mobile-app",
-          link2: "/more-info",
-          category: "UI/UX Design"
-      },
-      {
-        id: 5,
-        title: "Mobile App",
-        description: "Develop cutting-edge mobile applications.",
-        image: invoiceImage,
-        link1: "/mobile-app",
-        link2: "/more-info",
-        category: "UI/UX Design"
-    },
-    {
-      id: 6,
-      title: "Mobile App",
-      description: "Develop cutting-edge mobile applications.",
-      image: invoiceImage,
-      link1: "/mobile-app",
-      link2: "/more-info",
-      category: "UI/UX Design"
-  },
-        // Add more cards with respective categories
-    ];
-
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const [selectedCategory, setSelectedCategory] = useState('Web Development'); // Default category
-
-    const prevSlide = () => {
-        setCurrentIndex((prevIndex) =>
-            prevIndex === 0 ? filteredCards.length - 1 : prevIndex - 1
-        );
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
     };
 
-    const nextSlide = () => {
-        setCurrentIndex((prevIndex) =>
-            prevIndex === filteredCards.length - 1 ? 0 : prevIndex + 1
-        );
+    handleResize(); // Check on initial render
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
     };
+  }, []);
 
-    const filteredCards = cards.filter(card => card.category === selectedCategory);
+  const webDevelopmentImages = [
+    { src: IMG1, name: 'Web Development Project 1', description: 'This is the first web development project', figmaLink: '#', githubLink: '#' },
+    { src: IMG2, name: 'Web Development Project 2', description: 'This is the second web development project', figmaLink: '#', githubLink: '#' },
+    { src: IMG3, name: 'Web Development Project 3', description: 'This is the third web development project', figmaLink: '#', githubLink: '#' },
+    { src: IMG1, name: 'Web Development Project 4', description: 'This is the fourth web development project', figmaLink: '#', githubLink: '#' },
+    { src: IMG2, name: 'Web Development Project 5', description: 'This is the fifth web development project', figmaLink: '#', githubLink: '#' },
+    { src: IMG3, name: 'Web Development Project 6', description: 'This is the sixth web development project', figmaLink: '#', githubLink: '#' },
+  ];
 
-    return (
-        <div className="relative w-full pt-8 text-center bg-red-500">
-            <h1 className='uppercase font-bold text-[50px]'>Project</h1>
+  const uiUxImages = [
+    { src: IMG3, name: 'UI/UX Design Project 1', description: 'This is the first UI/UX design project', figmaLink: '#', githubLink: '#' },
+    { src: IMG1, name: 'UI/UX Design Project 2', description: 'This is the second UI/UX design project', figmaLink: '#', githubLink: '#' },
+    { src: IMG1, name: 'UI/UX Design Project 3', description: 'This is the third UI/UX design project', figmaLink: '#', githubLink: '#' },
+    { src: IMG3, name: 'UI/UX Design Project 1', description: 'This is the first UI/UX design project', figmaLink: '#', githubLink: '#' },
+    { src: IMG1, name: 'UI/UX Design Project 4', description: 'This is the fourth UI/UX design project', figmaLink: '#', githubLink: '#' },
+  ];
 
-            {/* Category selection */}
-            <h1 className='uppercase font-bold text-[25px]'>
-                <span
-                    className={`hover:text-yellow-500 cursor-pointer ${selectedCategory === 'Web Development' ? 'text-yellow-500' : ''}`}
-                    onClick={() => { setSelectedCategory('Web Development'); setCurrentIndex(0); }}
-                >
-                    Web Development
-                </span>
-                {' | '}
-                <span
-                    className={`hover:text-yellow-500 cursor-pointer ${selectedCategory === 'UI/UX Design' ? 'text-yellow-500' : ''}`}
-                    onClick={() => { setSelectedCategory('UI/UX Design'); setCurrentIndex(0); }}
-                >
-                    UI/UX Design
-                </span>
-            </h1>
+  const images = selectedCategory === 'Web Development' ? webDevelopmentImages : uiUxImages;
 
-            <div className="flex overflow-hidden">
-                {filteredCards.map((card, index) => (
-                    <div
-                        key={card.id}
-                        className={`w-full md:w-1/3 p-4 flex-shrink-0 transition-transform duration-600 ease-in-out ${
-                            index === currentIndex ? 'transform translate-x-0' : 'transform translate-x-full'
-                        }`}
-                        style={{ transform: `translateX(-${currentIndex * 100 / 3}%)` }}
-                    >
-                        <div className="overflow-hidden text-white bg-[#28193f] rounded-[30px]">
-                            <img src={card.image} alt={card.title} className="object-cover rounded-[50px] flex p-8 flex-grow w-[700px] h-[350px] overflow-hidden" />
-                            <h2 className="pl-8 mt-2 text-xl font-bold uppercase">{card.title}</h2>
-                            <p className="px-8 py-2 pl-8">{card.description}</p>
-                            <div className="flex justify-center gap-8 p-8 mt-2 font-bold uppercase">
-                                <a href={card.link1} className="py-2 text-black bg-yellow-500 rounded px-7 btn btn-primary">Figma</a>
-                                <a href={card.link2} className="py-2 text-black bg-yellow-500 rounded px-7 btn btn-secondary">Github</a>
-                            </div>
-                        </div>
-                    </div>
-                ))}
-            </div>
+  const scrollLeft = () => {
+    setStartIndex((prevIndex) => Math.max(prevIndex - 1, 0));
+  };
 
-            <div className="flex justify-center gap-8 pb-8 mt-4">
-                <FaChevronLeft
-                    onClick={prevSlide}
-                    className="text-3xl cursor-pointer hover:text-yellow-500"
-                />
-                <FaChevronRight
-                    onClick={nextSlide}
-                    className="text-3xl cursor-pointer hover:text-yellow-500"
-                />
-            </div>
+  const scrollRight = () => {
+    setStartIndex((prevIndex) => Math.min(prevIndex + 1, images.length - (isMobile ? 1 : 3)));
+  };
+
+  return (
+    <div className="relative items-center justify-center w-full h-full p-10 text-center bg-cover" style={{ backgroundImage: `url(${IMG3})` }}>
+      <div className="p-8 text-4xl text-white md:text-6xl font-londrina">
+        Projects
+      </div>
+      <div className="flex justify-center mt-4 space-x-4">
+        <button
+          onClick={() => { setSelectedCategory('Web Development'); setStartIndex(0); }}
+          className={`text-xl ${selectedCategory === 'Web Development' ? 'text-[#f7bb7e]' : 'text-white'}`}
+        >
+          Web Development
+        </button>
+        <span className="text-xl text-white">|</span>
+        <button
+          onClick={() => { setSelectedCategory('UI/UX Design'); setStartIndex(0); }}
+          className={`text-xl ${selectedCategory === 'UI/UX Design' ? 'text-[#f7bb7e]' : 'text-white'}`}
+        >
+          UI/UX Design
+        </button>
+      </div>
+
+      <div className="relative mt-8 md:mt-16">
+        <div className="flex items-center justify-center">
+          <button
+            className={`absolute z-10 text transform -translate-y-1/2 left-2 md:left-4 top-1/2 ${startIndex === 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
+            onClick={scrollLeft}
+            disabled={startIndex === 0}
+          >
+            <span className="text-2xl md:text-5xl font-londrina hover:text-[#f7bb7e] text-white">{'<'}</span>
+          </button>
+          <div className="flex justify-center w-full overflow-hidden">
+            {images.slice(startIndex, startIndex + (isMobile ? 1 : 3)).map((image, index) => (
+              <div key={index} className="relative flex-none w-64 mx-2 md:w-[500px]">
+                <img className="w-full h-auto transition-transform duration-500 transform hover:scale-110" src={image.src} alt={image.name} />
+                <div className="absolute inset-0 flex flex-col items-center justify-center text-white transition-opacity duration-300 bg-black bg-opacity-50 opacity-0 hover:opacity-100">
+                  <h3 className="text-lg font-bold md:text-2xl">{image.name}</h3>
+                  <p className="mb-4 text-sm">{image.description}</p>
+
+                  <div className="flex space-x-4">
+                    <a href={image.figmaLink} target="_blank" rel="noopener noreferrer" className="px-6 py-2 mt-4 mr-4 text-black hover:bg-[#f7bb7e] bg-white  rounded">Figma</a>
+                    <a href={image.githubLink} target="_blank" rel="noopener noreferrer" className="px-6 py-2  mt-4 mr-4 text-black hover:bg-[#f7bb7e] bg-white rounded">GitHub</a>
+                  </div>
+
+                </div>
+              </div>
+            ))}
+          </div>
+          <button
+            className={`absolute z-10 transform -translate-y-1/2 right-2 md:right-4 top-1/2 ${startIndex + (isMobile ? 1 : 3) >= images.length ? 'opacity-50 cursor-not-allowed' : ''}`}
+            onClick={scrollRight}
+            disabled={startIndex + (isMobile ? 1 : 3) >= images.length}
+          >
+            <span className=" font-londrina text-2xl md:text-5xl hover:text-[#f7bb7e] text-white">{'>'}</span>
+          </button>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default Project;
