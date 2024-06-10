@@ -7,7 +7,7 @@ const Education = () => {
   return (
     <div className="p-4 mx-auto bg-cover" style={{backgroundImage: `url(${IMG3})`}}>
             <div className=''>
-            <h2 className="p-8 font-londrina text-6xl md:text-8xl  text-white transform  hover:text-[#f7bb7e]">EDUCATION</h2>
+            <h2 className="p-8 font-londrina text-6xl md:text-8xl  text-white transform  hover:text-[#f7bb7e]">Education</h2>
             </div>
       <div className="flex flex-col justify-between gap-2 md:flex-row">
         <div className="w-full p-4 text-white md:w-1/2 ">

@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 // Importing images
+import Sky from '../Assets/sky3.jpg';
+
 import IMG1 from '../Assets/Hero/Me2.jpg';
 import IMG2 from '../Assets/Hero/Me3.jpg';
 import IMG3 from '../Assets/Hero/Me4.jpg';
@@ -50,8 +52,8 @@ const Project = () => {
   };
 
   return (
-    <div className="relative items-center justify-center w-full h-full p-10 text-center bg-cover" style={{ backgroundImage: `url(${IMG3})` }}>
-      <div className="p-8 text-4xl text-white md:text-6xl font-londrina">
+    <div className="relative items-center justify-center w-full h-full p-10 text-center bg-center bg-cover" style={{ backgroundImage: `url(${Sky})` }}>
+      <div className="p-8 text-6xl text-white md:text-8xl font-londrina">
         Projects
       </div>
       <div className="flex justify-center mt-4 space-x-4">
