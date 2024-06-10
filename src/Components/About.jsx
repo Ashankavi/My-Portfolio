@@ -9,12 +9,16 @@ const About = () => {
     {
       title: "About Me",
       description: "My academic journey has been both rigorous and rewarding. I recently completed my Higher National Diploma in Computing (General) from IDM Nations Campus, complemented by a Diploma in Information Technology from ESOFT Metro Campus. These programs have solidified my knowledge in key web development technologies, including HTML, CSS, Tailwind CSS, React, and JavaScript.",
-      details: "Ashan is known for his expertise in web development and graphic design. He has worked on numerous projects, delivering high-quality results."
+      details: "With extensive experience in Figma and Adobe Photoshop, I combine my technical skills with a keen eye for design, enabling me to create visually appealing and user-friendly interfaces."
     },
     {
-      title: "Another Text",
-      description: "This is another brief description for the second slide.",
-      details: "This section provides additional information about Ashan's achievements and skills in the industry."
+      title: "My Details",
+      description: "I’m creative Front-End Web Developer & UI UX Designer, I look forward to improving my skills at every turn.",
+      age: "Age : 23",
+      nationality: "Nationality : Sri Lanka",
+      address: "Address : No 300, Citrus Junction, Narawala, Poddala",
+      email: "Email : uhashankavi@gmail.com",
+      language: "Language : Engilsh, Sinhala",
     }
   ];
 
@@ -27,23 +31,32 @@ const About = () => {
   };
 
   return (
-    <div className="w-full h-full bg-black">
+    <div className="w-full h-full pb-[50px] bg-black">
       <div className="grid h-auto max-w-full mx-auto md:h-screen md:grid-cols-2">
         <div className="w-full h-64 md:h-full">
           <img className="object-cover w-full h-full" src={IMG3} alt="About" />
         </div>
         <div className="flex flex-col justify-center p-6 tracking-wide text-white md:p-10 font-londrina">
-          <h1 className="text-4xl md:text-8xl">{slides[currentSlide].title}</h1>
-          <p className="mt-2 text-lg md:text-2xl">{slides[currentSlide].description}</p>
-          <p className="mt-2 text-md md:text-xl">{slides[currentSlide].details}</p>
+          <h1 className="text-4xl md:text-8xl hover:text-[#f7bb7e]">{slides[currentSlide].title}</h1>
+          <div
+            style={{ height: '300px', overflow: 'hidden' }} // Fixed height for the text container
+          >
+            <p className="mt-2 text-lg md:text-2xl">{slides[currentSlide].description}</p>
+            <p className="mt-2 text-md md:text-xl">{slides[currentSlide].details}</p>
+            <p className="mt-2 ml-4 text-md md:text-xl">{slides[currentSlide].age}</p>
+            <p className="mt-2 ml-4 text-md md:text-xl">{slides[currentSlide].nationality}</p>
+            <p className="mt-2 ml-4 text-md md:text-xl">{slides[currentSlide].address}</p>
+            <p className="mt-2 ml-4 text-md md:text-xl">{slides[currentSlide].email}</p>
+            <p className="mt-2 ml-4 text-md md:text-xl">{slides[currentSlide].language}</p>
+          </div>
           <div className='py-4 md:py-8'>
             {currentSlide === 0 && (
-              <a href={CV} download className="p-2 mt-4 mr-4 text-white bg-blue-500 rounded">Download CV</a>
+              <a href={CV} download className="p-2 mt-4 mr-4 text-black hover:bg-[#f7bb7e] bg-white rounded">Download CV</a>
             )}
           </div>
-          <div className="flex items-end justify-between mt-4">
-            <button onClick={prevSlide} className="mr-4 text-2xl">{'<'}</button>
-            <button onClick={nextSlide} className="text-2xl">{'>'}</button>
+          <div className="flex items-end justify-between mt-2">
+            <button onClick={prevSlide} className="mr-4 text-4xl hover:text-[#f7bb7e]">{'<'}</button>
+            <button onClick={nextSlide} className="text-4xl hover:text-[#f7bb7e]">{'>'}</button>
           </div>
         </div>
       </div>
