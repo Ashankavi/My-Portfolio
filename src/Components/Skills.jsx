@@ -96,7 +96,7 @@ const sliderSettings2 = {
 
 const Skills = () => {
   return (
-    <div className="py-20 text-white bg-[#000000]">
+    <div id='skills' className="py-20 text-white bg-[#000000]">
       <h2 className="mb-10 text-6xl text-center text-white font-londrina md:text-8xl  hover:text-[#f7bb7e]">My Skills</h2>
       
       <h3 className="py-8 mt-10 mb-4 text-2xl font-bold text-center uppercase  hover:text-[#8750f7]">professional skills</h3>

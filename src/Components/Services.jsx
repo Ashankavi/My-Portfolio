@@ -27,7 +27,7 @@ const Services = () => {
   };
 
   return (
-    <div className="relative items-center justify-center w-full h-full tracking-wider text-center uppercase bg-cover font-londrina " style={{backgroundImage: `url(${Sky})`}}>
+    <div id='service' className="relative items-center justify-center w-full h-full tracking-wider text-center uppercase bg-cover font-londrina " style={{backgroundImage: `url(${Sky})`}}>
       <div className="pt-8 text-6xl text-white transform md:text-8xl font-londrina hover:text-[#f7bb7e]">
         Services
       </div>

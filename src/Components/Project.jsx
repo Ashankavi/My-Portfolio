@@ -127,14 +127,14 @@ const Project = () => {
   };
 
   return (
-    <div className="relative items-center justify-center w-full h-full p-10 text-center bg-center bg-cover" style={{ backgroundImage: `url(${Sky})` }}>
+    <div id='project' className="relative items-center justify-center w-full h-full p-10 text-center bg-center bg-cover" style={{ backgroundImage: `url(${Sky})` }}>
       <div className="p-8 text-6xl text-white md:text-8xl font-londrina hover:text-[#f7bb7e]">
         Projects
       </div>
       <div className="flex justify-center mt-4 space-x-4 font-londrina">
         <button
           onClick={() => { setSelectedCategory('Web Development'); setStartIndex(0); }}
-          className={`text-3xl uppercase ${selectedCategory === 'Web Development' ? 'text-[#f7bb7e]' : 'text-white'}`}
+          className={`text-3xl uppercase ${selectedCategory === 'Web Development' ? 'text-[#8750F7]' : 'text-white'}`}
         >
           Web Development
         </button>
@@ -161,14 +161,14 @@ const Project = () => {
               <div key={index} className="relative flex-none w-64 mx-2 md:w-[450px]">
                 <img className="w-full h-auto transition-transform duration-500 transform hover:scale-110" src={image.src} alt={image.name} />
                 <div className="absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-300 bg-black bg-opacity-50 opacity-0 hover:opacity-100">
-                  <h3 className="text-lg text-[#ffffff] tracking-wider uppercase sm:text-4xl md:text-3xl">{image.name}</h3>
+                  <h3 className="text-lg px-2 text-[#ffffff] tracking-wider uppercase sm:text-4xl md:text-4xl">{image.name}</h3>
                   <p className="mb-4 px-8 md:text-[22px] tracking-normal text-white sm:text-2sm">{image.description}</p>
                   <p className="mb-2 md:text-[20px] tracking-normal text-[#f7f3ff] sm:text-2sm">{image.frontend}</p>
                   <p className="mb-4 md:text-[20px]  tracking-normal text-[#ffffff] sm:text-[5px]">{image.design}</p>
 
                   <div className="flex space-x-4">
-                    <a href={image.figmaLink} target="_blank" rel="noopener noreferrer" className="px-6 py-2 mt-4 mr-4 text-black hover:bg-[#4fe07f] hover:text-[#ffffff] bg-white  rounded">Design</a>
-                    <a href={image.githubLink} target="_blank" rel="noopener noreferrer" className="px-6 py-2  mt-4 mr-4 text-black hover:bg-[#ee6d6d] hover:text-[#ffffff] bg-white rounded">GitHub</a>
+                    <a href={image.figmaLink} target="_blank" rel="noopener noreferrer" className=" uppercase px-6 py-2 mt-4 mr-4 text-black hover:bg-[#4fe07f] hover:text-[#ffffff] bg-white  rounded">Design</a>
+                    <a href={image.githubLink} target="_blank" rel="noopener noreferrer" className=" uppercase px-6 py-2  mt-4 mr-4 text-black hover:bg-[#ee6d6d] hover:text-[#ffffff] bg-white rounded">GitHub</a>
                   </div>
 
                 </div>

@@ -13,7 +13,7 @@ const Hero = () => {
 
   return (
     <div className='relative hero-container'>
-      <div className="w-full h-full bg-center bg-cover hero-bg" style={{ backgroundImage: `url(${IMG1})` }}>
+      <div className="w-full h-screen bg-center bg-cover hero-bg" style={{ backgroundImage: `url(${IMG1})` }}>
         <div className='max-w-[1240px] mx-auto grid md:grid-cols-2 mt-8'>
           <div>
             <div className='flex flex-col justify-center my-[107px] ml-10 tracking-wide text-white font-londrina'>
@@ -22,7 +22,7 @@ const Hero = () => {
               <h1 className='text-[30px] md:text-5xl sm:text-4xl pb-5 hover:text-[#f7bb7e]'>Front-End-Developer</h1>
               <div className='py-4 md:py-8'>
             {currentSlide === 0 && (
-              <a href={CV} download className="py-4 px-8 text-xl text-white border-[1px]  border-white hover:bg-[#ffffff] hover:text-[#000000]  rounded">Download CV</a>
+              <a href={CV} download className=" hover:border-[#f7bb7e] py-4 px-8 text-xl text-white border-[1px]  border-white hover:bg-[#ffffff] hover:text-[#000000]  rounded">Download CV</a>
             )}
           </div>
             </div>

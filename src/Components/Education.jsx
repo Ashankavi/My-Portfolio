@@ -1,11 +1,11 @@
 
 import React from 'react';
 
-import IMG3 from '../Assets/Hero/Me4.jpg';
+import Sky from '../Assets/sky3.jpg';
 
 const Education = () => {
   return (
-    <div className="p-4 mx-auto bg-cover" style={{backgroundImage: `url(${IMG3})`}}>
+    <div id='education' className="p-4 mx-auto bg-center bg-cover" style={{backgroundImage: `url(${Sky})`}}>
             <div className=''>
             <h2 className="p-8 font-londrina text-6xl md:text-8xl  text-white transform  hover:text-[#f7bb7e]">Education</h2>
             </div>
@@ -52,8 +52,8 @@ const Education = () => {
           </div>
 
           <div className="p-8 mb-6 bg-black rounded-2xl hover:bg-gradient-to-r from-[#382753] to-[#170c2b] font-sans font-bold">
-            <h3 className="text-2xl font-bold text-[#8750f7] uppercase">Self Learning Platforms</h3>
-            <p className="text-3xl uppercase">W3School , TailwindCSS, React</p>
+            <h3 className="text-2xl font-bold text-[#8750f7] uppercase">Self Learning </h3>
+            <p className="text-3xl uppercase">W3School , TailwindCSS, React JS,three js, React native, blender</p>
             <p className="text-xl font-semibold"></p>
             <p></p>
           </div>
