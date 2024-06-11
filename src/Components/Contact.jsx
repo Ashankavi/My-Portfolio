@@ -24,7 +24,7 @@ const Contact = () => {
         <div>
           <iframe
             title="office location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345093714!2d144.95373631531078!3d-37.81627974202144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf0727b0f632aaf1!2sEnvato%20Pty%20Ltd!5e0!3m2!1sen!2sau!4v1630933656787!5m2!1sen!2sau"
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d897.5241540277382!2d80.23061026953229!3d6.105652333115214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNsKwMDYnMjAuMyJOIDgwwrAxMyc1Mi41IkU!5e1!3m2!1sen!2slk!4v1718119910427!5m2!1sen!2slk"
             className="w-full h-64 border-[1px] border-white p-2"
             allowFullScreen=""
             loading="lazy"
