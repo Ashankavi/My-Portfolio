@@ -5,7 +5,7 @@ import Sky1 from '../Assets/Contact/sky2.jpg';
 
 const Contact = () => {
   return (
-    <div id='contact' className="flex flex-col p-6 text-white bg-center bg-cover md:flex-row" style={{backgroundImage: `url(${Sky1})`}}>
+    <div id='contact' className="flex flex-col p-6 text-white bg-center bg-cover md:flex-row bg-[#000000]">
       <div className="p-4 md:w-1/2">
         
       <h2 className=" font-londrina text-6xl md:text-8xl  text-white transform  hover:text-[#f7bb7e]">Contact</h2>

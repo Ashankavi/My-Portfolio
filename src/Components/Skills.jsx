@@ -20,22 +20,22 @@ import teamW from '../Assets/Skills/4.png';
 
 
 const skillsData1 = [
-  { img: Java, name: 'Java', },
-  { img: CSharp, name: 'C+', },
-  { img: ReactJS, name: 'React JS', },
-  { img: HTML, name: 'HTML', },
-  { img: CSS, name: 'CSS', },
-  { img: JS, name: 'Java Script', },
-  { img: tailwind, name: 'tailwind CSS', },
-  { img: PS, name: 'Photoshop', },
-  { img: figma, name: 'Figma', },
+  { img: Java, name: 'Java' },
+  { img: CSharp, name: 'C#' },
+  { img: ReactJS, name: 'React JS' },
+  { img: HTML, name: 'HTML' },
+  { img: CSS, name: 'CSS' },
+  { img: JS, name: 'JavaScript' },
+  { img: tailwind, name: 'Tailwind CSS' },
+  { img: PS, name: 'Photoshop' },
+  { img: figma, name: 'Figma' },
 ];
 
 const skillsData2 = [
-  { img: Commu, name: 'Communication', },
-  { img: Self, name: 'Time Management', },
-  { img: Speed, name: 'Self Motivation', },
-  { img: teamW, name: 'Team work', },
+  { img: Commu, name: 'Communication' },
+  { img: Self, name: 'Time Management' },
+  { img: Speed, name: 'Self Motivation' },
+  { img: teamW, name: 'Team Work' },
 ];
 
 const sliderSettings1 = {
@@ -96,37 +96,46 @@ const sliderSettings2 = {
 
 const Skills = () => {
   return (
-    <div id='skills' className="py-20 text-white bg-[#000000]">
-      <h2 className="mb-10 text-6xl text-center text-white font-londrina md:text-8xl  hover:text-[#f7bb7e]">My Skills</h2>
+    <div id='skills' className="py-20 text-white bg-[#000000] overflow-x-hidden">
+      <h2 className="mb-10 text-6xl text-center text-white font-londrina md:text-8xl hover:text-[#f7bb7e]">My Skills</h2>
       
-      <h3 className="py-8 mt-10 mb-4 text-2xl font-bold text-center uppercase  hover:text-[#8750f7]">professional skills</h3>
-      <Slider {...sliderSettings1}>
-        {skillsData1.map((skill, index) => (
-          <div key={index} className="p-4 text-center">
-            <img src={skill.img} alt={skill.name} className="h-[80px] mx-auto mb-4 w-[80px]" />
-            <p className="text-xl text-[#8750f7] font-londrina  hover:text-[#ffffff]">{skill.name}</p>
-          </div>
-        ))}
-      </Slider>
+      <h3 className="py-8 mt-10 mb-4 text-2xl font-bold text-center uppercase hover:text-[#8750f7]">Professional Skills</h3>
+      <div className="container px-4 mx-auto">
+        <Slider {...sliderSettings1}>
+          {skillsData1.map((skill, index) => (
+            <div key={index} className="p-4 text-center">
+              <img src={skill.img} alt={skill.name} className="h-[80px] mx-auto mb-4 w-[80px]" />
+              <p className="text-xl text-[#8750f7] font-londrina hover:text-[#ffffff]">{skill.name}</p>
+            </div>
+          ))}
+        </Slider>
+      </div>
 
-      <h3 className="py-8 mt-10 mb-4 text-2xl font-bold text-center uppercase hover:text-[#8750f7]">personal skills</h3>
-      <Slider {...sliderSettings2}>
-        {skillsData2.map((skill, index) => (
-          <div key={index} className="p-4 text-center">
-            <img src={skill.img} alt={skill.name} className="h-[90px] mx-auto mb-4 w-[90px]" />
-            <p className="text-xl text-[#8750f7] font-londrina  hover:text-[#ffffff]">{skill.name}</p>
-          </div>
-        ))}
-      </Slider>
+      <h3 className="py-8 mt-10 mb-4 text-2xl font-bold text-center uppercase hover:text-[#8750f7]">Personal Skills</h3>
+      <div className="container px-4 mx-auto">
+        <Slider {...sliderSettings2}>
+          {skillsData2.map((skill, index) => (
+            <div key={index} className="p-4 text-center">
+              <img src={skill.img} alt={skill.name} className="h-[90px] mx-auto mb-4 w-[90px]" />
+              <p className="text-xl text-[#8750f7] font-londrina hover:text-[#ffffff]">{skill.name}</p>
+            </div>
+          ))}
+        </Slider>
+      </div>
 
-      {/* Custom styles for slider dots */}
+      {/* Custom styles for slider dots and arrows */}
+
       <style jsx>{`
         .slick-dots li button:before {
           font-size: 10px; /* Change dots size */
           color: white; /* Change dots color */
         }
         .slick-dots li.slick-active button:before {
-          color: white; /* Change active dot color to red */
+          color: white; /* Change active dot color to white */
+        }
+        .slick-prev, .slick-next {
+          padding: 50px; /* Add padding to arrow buttons */
+
         }
       `}</style>
     </div>

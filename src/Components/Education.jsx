@@ -5,7 +5,7 @@ import Sky from '../Assets/sky3.jpg';
 
 const Education = () => {
   return (
-    <div id='education' className="p-4 mx-auto bg-center bg-cover" style={{backgroundImage: `url(${Sky})`}}>
+    <div id='education' className="p-4 mx-auto bg-center bg-cover bg-[#0c0c0c]">
             <div className=''>
             <h2 className="p-8 font-londrina text-6xl md:text-8xl  text-white transform  hover:text-[#f7bb7e]">Education</h2>
             </div>

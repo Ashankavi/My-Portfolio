@@ -127,7 +127,7 @@ const Project = () => {
   };
 
   return (
-    <div id='project' className="relative items-center justify-center w-full h-full p-10 text-center bg-center bg-cover" style={{ backgroundImage: `url(${Sky})` }}>
+    <div id='project' className="relative items-center justify-center w-full h-full p-10 text-center bg-center bg-cover bg-[#0c0c0c]">
       <div className="p-8 text-6xl text-white md:text-8xl font-londrina hover:text-[#f7bb7e]">
         Projects
       </div>
