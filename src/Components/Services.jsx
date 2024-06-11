@@ -27,12 +27,12 @@ const Services = () => {
   };
 
   return (
-    <div id='service' className="relative items-center justify-center w-full h-full tracking-wider text-center uppercase bg-cover font-londrina " style={{backgroundImage: `url(${Sky})`}}>
+    <div id='service' className="relative items-center justify-center w-full h-full tracking-wider text-center uppercase bg-black bg-cover font-londrina ">
       <div className="pt-8 text-6xl text-white transform md:text-8xl font-londrina hover:text-[#f7bb7e]">
         Services
       </div>
       
-      <div className="grid mt-16 md:grid-cols-3"> 
+      <div className="grid md:grid-cols-3"> 
         {images.map((image, index) => (
           <div
             key={index}
