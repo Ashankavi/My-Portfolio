@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 // Importing images
-import Sky from '../Assets/sky3.jpg';
+// import Sky from '../Assets/sky3.jpg';
 
 import NehaStore from '../Assets/Project/UiUX/NehaStore1.jpg';
 import Coffee from '../Assets/Project/UiUX/CoffeeApp.jpg';
