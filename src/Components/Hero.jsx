@@ -3,7 +3,7 @@ import { FaTwitter, FaFacebook, FaLinkedin, FaInstagram, FaGithub, FaBehance, Fa
 import './Hero.css'; // Import the CSS file
 
 import IMG1 from '../Assets/Hero/Me45.jpg';
-import CV from '../Assets/About/MyCV.pdf'; // Assuming the CV file is in this path
+import MYCV from '../Assets/About/MyCV.pdf' // Assuming the CV file is in this path
 
 
 
@@ -22,7 +22,7 @@ const Hero = () => {
               <h1 className='text-[30px] md:text-5xl sm:text-4xl pb-5 hover:text-[#f7bb7e]'>Front-End-Developer</h1>
               <div className='py-4 md:py-8'>
             {currentSlide === 0 && (
-              <a href={CV} download className=" hover:border-[#f7bb7e] py-4 px-8 text-xl text-white border-[1px]  border-white hover:bg-[#ffffff] hover:text-[#000000]  rounded">Download CV</a>
+              <a href={MYCV} download className=" hover:border-[#f7bb7e] py-4 px-8 text-xl text-white border-[1px]  border-white hover:bg-[#ffffff] hover:text-[#000000]  rounded">Download CV</a>
             )}
           </div>
             </div>

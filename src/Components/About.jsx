@@ -2,7 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import IMG3 from '../Assets/Hero/Me4.jpg';
 import IMG4 from '../Assets/Hero/Me2.jpg';
 import IMG5 from '../Assets/Hero/Me45.jpg';
-import CV from '../Assets/About/MyCV.pdf';
+
+import MYCV from '../Assets/About/MyCV.pdf'
 
 const About = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -65,7 +66,7 @@ const About = () => {
           </div>
           <div className='py-8 '>
             {currentSlide === 0 && (
-              <a href={CV} download className="py-4 px-8 text-xl text-white border-[1px] border-white hover:border-[#f7bb7e] hover:bg-[#ffffff] hover:text-[#000000] rounded">Download CV</a>
+              <a href={MYCV} download className="py-4 px-8 text-xl text-white border-[1px] border-white hover:border-[#f7bb7e] hover:bg-[#ffffff] hover:text-[#000000] rounded">Download CV</a>
             )}
           </div>
           <div className="flex items-end justify-between mt-2">
