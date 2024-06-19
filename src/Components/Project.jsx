@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
+
 // Importing images
-// import Sky from '../Assets/sky3.jpg';
 
 import NehaStore from '../Assets/Project/UiUX/NehaStore1.jpg';
 import Coffee from '../Assets/Project/UiUX/CoffeeApp.jpg';
@@ -180,7 +180,7 @@ const Project = () => {
             onClick={scrollRight}
             disabled={startIndex + (isMobile ? 1 : 3) >= images.length}
           >
-            <span className=" font-londrina text-2xl md:text-5xl hover:text-[#f7bb7e] text-white">{'>'}</span>
+            <span className="font-londrina text-2xl md:text-5xl hover:text-[#f7bb7e] text-white">{'>'}</span>
           </button>
         </div>
       </div>
