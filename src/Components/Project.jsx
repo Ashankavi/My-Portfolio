@@ -15,6 +15,8 @@ import MainPortfolio from '../Assets/Project/Web/MainPolio.jpg';
 import LandingPage from '../Assets/Project/Web/LandingPage.jpg';
 import BusinessLanding from '../Assets/Project/Web/BusinessLanding.jpg';
 import Windows11 from '../Assets/Project/Web/windows.jpg';
+import Spotify from '../Assets/Project/Web/spotify.jpg';
+import Speech from '../Assets/Project/Web/Speech.jpg';
 
 
 
@@ -46,7 +48,15 @@ const Project = () => {
     description: 'A Windows 11 themed portfolio using React.js, Tailwind CSS, and JavaScript, featuring draggable folders with React RND, React Perfect Scrollbar, and React Icons.',
     frontend:'Frontend: React JS, Tailwind CSS, JavaScript',design:'',
      figmaLink: 'https://dribbble.com/shots/24333056-Windows-11-Theam-Personal-Portfolio', githubLink: 'https://github.com/Ashankavi/Windows11-Portfolio' },
-
+     
+     { src: Spotify, name: 'Spotify Song Downloder', description: 'This tool uses React JS, Tailwind CSS, and JavaScript to fetch song details from Spotify, including the song and artist name, publish date, duration, image and lyrics.',
+     frontend:'Frontend: React JS, Tailwind CSS, JavaScript',design:'',
+      figmaLink: 'https://dribbble.com/shots/24413282-Spotify-Song-Converter', githubLink: 'https://github.com/Ashankavi/Spotify-Downloader' },
+ 
+      { src: Speech, name: 'Speech to Text Converter', description: 'Speech-to-Text Converter: React.js, JavaScript, and Tailwind CSS power real-time English and Sinhala speech recognition and text manipulation.',
+      frontend:'Frontend: React JS, Tailwind CSS, JavaScript',design:'',
+       figmaLink: 'https://dribbble.com/shots/24413311-Speech-to-Text-Converter-Sinhala-and-English', githubLink: 'https://github.com/Ashankavi/Speech-Recognition' },
+  
     { src: Photographer, name: 'Photographer Portfolio', description: 'The project has a vintage-themed UI using React JS and Tailwind CSS, with About, Services, About Studio, and Contact pages.',
     frontend:'Frontend: React JS, Tailwind CSS, JavaScript',design:'Design: Figma , Photoshop',
      figmaLink: 'https://dribbble.com/shots/24119877-Photographer-Portfolio-Web-Design', githubLink: 'https://github.com/Ashankavi/photographer-portfolio' },
